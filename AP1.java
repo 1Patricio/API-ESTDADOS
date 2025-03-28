@@ -75,31 +75,36 @@ public class AP1 {
             public Double[][] temperaturas;
             public Double temperatura;
             public String[] cidades;
-            public String cidade;
+            public String[] diaSemana;
 
-            public Matriz(int numeroCidades, int qtdTemperaturas) {
+            public Matriz(int numeroCidades, int diaSemana) {
                 this.cidades = new String[numeroCidades];
-                this.temperaturas = new Double[numeroCidades][qtdTemperaturas];
+                this.temperaturas = new Double[numeroCidades][diaSemana];
+
+                this.diaSemana = new String[]{"Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"};
             }
 
-            public void adicionarCidadeETempeturatura(){
+
+            public void adicionarCidadeETempeturatura() {
                 int min = -5;
                 int max = 42;
+                String dia;
 
                 for (int i = 0; i < cidades.length; i++) {
                     this.cidades[i] = "Cidade " + i;
 
                     for (int j = 0; j < temperaturas[i].length; j++) {
-
                         this.temperatura = Math.random() * (max - min) + min;
-                        Double temperaturaArredondada = (double)Math.round(this.temperatura * 100.0) / 100.0;
-                        this.temperaturas[i][j] = temperaturaArredondada;;
+                        Double temperaturaArredondada = (double) Math.round(this.temperatura * 100.0) / 100.0;
+                        this.temperaturas[i][j] = temperaturaArredondada;
                     }
                 }
                 // Exibir os dados corretamente
-                for (int i = 0; i < cidades.length; i++) {
-                    System.out.println(cidades[i] + " - Temperaturas: " + Arrays.toString(temperaturas[i]));
-                }
+
+                    for (int i = 0; i < cidades.length + 1; i++) {
+                        System.out.println(cidades[i] + " - Temperatura no dia: " + Arrays.toString(temperaturas[i]) );
+                    }
+
             }
             public void mediaTemperaturaPorCidade(){
                 Double media = 0.00;
@@ -113,6 +118,10 @@ public class AP1 {
                     System.out.println(mediaArredondada + "ºC");
                     System.out.println();
                 }
+            }
+
+            public void temperaturaMaisAlta(){
+
             }
         }
 
