@@ -1,0 +1,20 @@
+Exercício 3
+
+    1 - O algoritmo A equivale a uma ordenação Bubble Sort, identificável pela presença de uma variável temporária, e de realizar sobrescrição de variáveis, conforme linha:
+        int temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+        Essa ordenação, inicia o processo pela primeira posição de um array, sempre realizando comparações com a próxima posição na sequência, ou seja, inicia na posição 0 e realiza as validações com a posição 1, se satisfatórias, refaz o processo com a posição 2 e assim por diante. Estruturalmente, ele inicializa uma variável com o tamanho do array, em seguida, inicializa um laço de repetição For, para começar a primeira validação, ou seja, se o valor declarado de I vai ser menor que as outras posições do array, em seguida, outro laço For que valida um valor J, também em comparação com as posições do array e ainda com o valor de I. Bom, caso ele entre/passe nessas validações, ele entra em um bloco condicional, que vai relacionar o valor da variável J se ele é maior que a posição do array no valor de J + 1, caso ele seja maior, entrará no processo para "borbulhar", ou seja, passar para a próxima posição no array, onde o valor a ser sobrescrito é guardado em memória, o valor a borbulhar ocupa o lugar do valor a ser sobrescrito, e o valor a ser sobrescrito ocupa o lugar anterior ao valor que borbulhou, e esse processo se repetirá até que as condições sejam satisfeitas a não progredirem no código, ou seja, todos tomarem suas posições na lista crescentemente
+
+        O algoritmo B equivale a uma ordenação Insertion Sort, que vai aplicar quase o mesmo conceito da ordenação anterior, porém, ele analisa nos primeiros trechos o array todo, ele inicia na segunda posição do array, e vai progredindo e "empurrando" os demais itens do array, sequencialmente, até que as condições sejam sanadas e nenhum elemento ocupe o lugar do outro. 
+
+    2 - Insertion Sort, pois o mesmo em uma lista quase ordenada, necessita de menos iterações para ordenar todos,  visto que, ocorrerá menos trocas de posição entre os itens do array.
+
+    3 - Bubble Sort, pois ele valida item a item, e teria que passar e validar por todos os 100.000 itens até realizar uma iteração, e assim até que todos estejam corretos.
+
+Exercício 4
+
+    1 - Selection Sort, elegindo o primeiro elemento para as trocas, ele compara o valor da posição inicial com os valores de todas as outras posições, e substitui onde o mesmo for menor, seguindo até que essa condição não seja exequível, e assim, retoma o processo com a próxima posição da lista.
+
+    2 - 9 trocas, 3 iterações. (Demonstração no arquivo Ex4At2)
+    3 - Ainda não seria o mais ideal, o Insertion Sort é mais recomendado, performaticamente, para listas quase ordenadas, visto que ele realiza iterações mais diretas e em menor escala para a ordenação
