@@ -16,5 +16,10 @@ Exercício 4
 
     1 - Selection Sort, elegindo o primeiro elemento para as trocas, ele compara o valor da posição inicial com os valores de todas as outras posições, e substitui onde o mesmo for menor, seguindo até que essa condição não seja exequível, e assim, retoma o processo com a próxima posição da lista.
 
-    2 - 9 trocas, 3 iterações. (Demonstração no arquivo Ex4At2)
+    2. Quantas trocas são realizadas para ordenar o vetor [64, 25, 12, 22, 11]? Mostre passo a passo.
+            Troca 1: arr[0] (64) é trocado com arr[4] (11).
+            Troca 2: arr[1] (25) é trocado com arr[2] (12).
+            Troca 3: arr[2] (25) é trocado com arr[3] (22).
+            Após a terceira troca fica assim: [11, 12, 22, 25, 64].
+
     3 - Ainda não seria o mais ideal, o Insertion Sort é mais recomendado, performaticamente, para listas quase ordenadas, visto que ele realiza iterações mais diretas e em menor escala para a ordenação
